@@ -100,7 +100,7 @@ submitButton.addEventListener("click", async() => {
     let user = document.getElementById("user-id" + userId);
     if (user === null) {
         let userLevel = calculateLevel(userXp);
-        let userNextLevel = levelNeededXP(userLevel);
+        let userNextLevel = levelNeededXP(userLevel + 1);
         makeUserProfile(userId, userLogin, userXp, userLevel, userNextLevel);
     }
 
@@ -128,7 +128,7 @@ function makeUserProfile(userId, userLogin, userXp, userLevel, userNextLevel) {
     document.getElementById("userId-result").innerHTML = "UserId: " + userId;
     document.getElementById("userXp-result").innerHTML = "Total XP: " + userXp;
     document.getElementById("userLevel-result").innerHTML = "Level: " + userLevel;
-    document.getElementById("userNextLevel-result").innerHTML = "Next level in: " + userNextLevel + " xp";
+    document.getElementById("userNextLevel-result").innerHTML = "Next level in: " + (userNextLevel - userXp) + " xp";
 }
 
 // from Olari and < Robert Reimann (Kanguste) >
