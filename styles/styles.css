@@ -1,0 +1,128 @@
+body {
+    background-color: aliceblue;
+}
+
+.query-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 140px;
+    margin: 4px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: lightblue;
+}
+
+.query-data h1 {
+    font-size: 20px;
+    margin: 0 0 10px 0;
+}
+
+.query-info {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 240px;
+    background-color: white;
+}
+
+.username-query {
+    padding: 8px;
+    margin: 4px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+}
+
+.username-query:focus {
+    outline: none;
+}
+
+.submit-button {
+    padding: 8px;
+    margin: 4px;
+    border: none;
+    border-radius: 10px;
+}
+
+.result-data {
+    display: none;
+    align-content: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 4px;
+    text-align: center;
+    background-color: lightblue;
+}
+
+.result-data h1 {
+    font-size: 20px;
+    margin: 10px 0 10px 0;
+}
+
+.user-profile {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 10px;
+    background-color: aliceblue;
+    max-width: 400px;
+}
+
+.user-profile>p {
+    margin: 6px;
+}
+
+.error-msg {
+    margin: 10px;
+}
+
+.all-graphs {
+    display: none;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: white;
+}
+
+.project-xp-chart {
+    border: 1px solid black;
+    background-color: lavender;
+    margin: 10px;
+    height: 500px;
+    width: 95%;
+    max-width: 775px;
+}
+
+.graph-path {
+    fill: lightblue;
+    stroke: blue;
+    stroke-width: 1;
+}
+
+.graph-line {
+    stroke: lightgray;
+}
+
+.graph-text {
+    text-anchor: middle;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.graph-circle {
+    fill: blue;
+    stroke-width: 1;
+    stroke: blue;
+}
+
+.total-xp-chart {
+    border: 1px solid black;
+    background-color: lavender;
+    margin: 10px;
+    height: 500px;
+    width: 95%;
+    max-width: 775px;
+}
