@@ -51,10 +51,10 @@ export const TotalXpChart = async(dataArray, frequency, lineCount, totalUserXp) 
         frequency = 10;
     }
 
-    const maxVal = totalUserXp / divider;
+    // const maxVal = totalUserXp / divider;
     const widthSvg = dataArray.length * frequency;
-    const heightSvg = maxVal + 130;
-    const graphLine = Math.ceil(maxVal / (lineCount - 1));
+    const heightSvg = widthSvg + 50;
+    const graphLine = Math.ceil(widthSvg / (lineCount - 1));
     // set up viewbox
     svgElement.setAttributeNS(null, "viewBox", "0 0 " + widthSvg + " " + (heightSvg + 40));
 

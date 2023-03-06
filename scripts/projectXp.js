@@ -52,10 +52,10 @@ export const ProjectXpChart = async(dataArray, frequency, lineCount) => {
         frequency = 20;
     }
 
-    const maxVal = Math.max(...dataArray.map((max) => max.amount)) / divider;
+    // const maxVal = Math.max(...dataArray.map((max) => max.amount)) / divider;
     const widthSvg = dataArray.length * frequency - frequency;
-    const heightSvg = maxVal + 130;
-    const graphLine = maxVal / (lineCount - 1);
+    const heightSvg = widthSvg + 50;
+    const graphLine = Math.ceil(widthSvg / (lineCount - 1));
     // set up viewbox
     svgElement.setAttributeNS(null, "viewBox", "0 0 " + widthSvg + " " + (heightSvg + 40));
 
