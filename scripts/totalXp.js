@@ -26,17 +26,17 @@ export const TotalXpChart = async(dataArray, frequency, lineCount, totalUserXp) 
     let rectWidth = 180;
     let rectYoffset = 65;
 
-    if (dataArray.length > 25) {
+    if (dataArray.length > 20) {
         frequency = 25;
-        divider = 7500;
-        ratio = 7.5;
+        divider = 6000;
+        ratio = 6;
         frequency = 20;
         legendFontSize = 22;
     }
-    if (dataArray.length > 35) {
+    if (dataArray.length > 30) {
         frequency = 25;
-        divider = 7500;
-        ratio = 7.5;
+        divider = 9000;
+        ratio = 9;
         frequency = 20;
         legendFontSize = 26;
         cardFontSize = 26;
@@ -46,14 +46,14 @@ export const TotalXpChart = async(dataArray, frequency, lineCount, totalUserXp) 
     }
     if (dataArray.length > 50) {
         frequency = 20;
-        divider = 15000;
-        ratio = 15;
+        divider = 18000;
+        ratio = 18;
         frequency = 10;
     }
 
     // const maxVal = totalUserXp / divider;
     const widthSvg = dataArray.length * frequency;
-    const heightSvg = widthSvg + 50;
+    const heightSvg = widthSvg + 130;
     const graphLine = Math.ceil(widthSvg / (lineCount - 1));
     // set up viewbox
     svgElement.setAttributeNS(null, "viewBox", "0 0 " + widthSvg + " " + (heightSvg + 40));

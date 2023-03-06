@@ -23,7 +23,7 @@ export const ProjectXpChart = async(dataArray, frequency, lineCount) => {
     let rectHeigh = 90;
     let rectWidth = 4;
     let rectYoffset = 110;
-    if (dataArray.length > 25) {
+    if (dataArray.length > 20) {
         divider = 1000;
         ratio = 1;
         legendFontSize = 32;
@@ -35,7 +35,7 @@ export const ProjectXpChart = async(dataArray, frequency, lineCount) => {
         rectWidth = 6;
         rectYoffset = 125;
     }
-    if (dataArray.length > 35) {
+    if (dataArray.length > 30) {
         divider = 2000;
         ratio = 2;
         frequency = 25;
@@ -54,7 +54,7 @@ export const ProjectXpChart = async(dataArray, frequency, lineCount) => {
 
     // const maxVal = Math.max(...dataArray.map((max) => max.amount)) / divider;
     const widthSvg = dataArray.length * frequency - frequency;
-    const heightSvg = widthSvg + 50;
+    const heightSvg = widthSvg + 130;
     const graphLine = Math.ceil(widthSvg / (lineCount - 1));
     // set up viewbox
     svgElement.setAttributeNS(null, "viewBox", "0 0 " + widthSvg + " " + (heightSvg + 40));
